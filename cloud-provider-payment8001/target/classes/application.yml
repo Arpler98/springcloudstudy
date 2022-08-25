@@ -11,6 +11,16 @@ spring:
     username: root
     password: ms10@HN21Sat
 
+eureka:
+  client:
+    register-with-eureka: true
+    fetch-registry: true
+    service-url:
+      defaultZone: http://eureka7001.com:7001/eureka,http://eureka7002.com:7002/eureka
+  instance:
+    instance-id: payment8001
+    prefer-ip-address: true     #访问路径可以显示IP地址
+
 mybatis:
   mapper-locations: classpath:mapper/*.xml
   type-aliases-package: com.arpler.entity
